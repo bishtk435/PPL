@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class RegisterService{
     constructor(private http: HttpClient){}
 
-    registerRequest(){
-        return this.http.post('http://localhost:5000/user/signupform', {firstName: 'Kamal', lastName: 'Bisht', age: 23}, { responseType: 'text'});
+    registerRequest(data){
+        console.log('This is the data we are receiving in the service', data);
+        return this.http.post('http://localhost:5000/user/signupform', data, { responseType: 'text'});
     }
 }
