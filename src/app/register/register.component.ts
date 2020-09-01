@@ -10,21 +10,37 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
- model = {
-    username: '',
-    password: '',
-    email: '',
-    firstName: '',
-    lastName: ''
-  }
   constructor(private registerService: RegisterService, private router: Router) { }
 
   ngOnInit(): void {
   
   }
 
-  handleRegister(){
-    this.registerService.registerRequest(this.model)
+  formData = {
+    username: '',
+    password: '',
+    email: '',
+    firstName: '',
+    lastName: ''
+  }
+
+  handleRegister(formValue){
+
+    console.log('This is form values we are receiving: ',this.formData);
+    if(!this.registerService.validateFormData(this.formData)){
+      alert('All fields required!');
+      return;
+    }else{
+      if(formValue.terms!= true){
+        alert('Please accept Terms & Conditions!');
+        return;
+      }
+    }
+
+    console.log('This is inside the formValue:', formValue);
+    
+    
+    this.registerService.registerRequest(this.formData)
     .subscribe( res => {
       console.log('This is we are getting from the server:', res);
       if(res === '1'){

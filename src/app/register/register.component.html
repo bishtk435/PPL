@@ -3,31 +3,31 @@
       <div class="content_rgt">
       <div class="register_sec">
       <h1>Create An Account</h1>
-      <form #registerForm="ngForm" (ngSubmit)="handleRegister()">
+      <form #registerForm="ngForm" (ngSubmit)="handleRegister(registerForm.value)">
         <ul>
           <li>
             <label for="username">Username</label>
-            <input [(ngModel)]="model.username" id="username" name="username"  type="text"  placeholder="Enter your username">
+            <input [(ngModel)]="formData.username" id="username" name="username"  type="text"  placeholder="Enter your username">
           </li>
           <li>
             <label for="password">Password</label>
-            <input [(ngModel)]="model.password" id="password" name="password"  type="text"  placeholder="Enter your password">
+            <input  [(ngModel)]="formData.password" id="password" name="password"  type="text"  placeholder="Enter your password">
           </li>
           <li>
             <label for="email">Email</label>
-            <input [(ngModel)]="model.email" id="email" type="text" name="email"   placeholder="Enter your email">
+            <input  [(ngModel)]="formData.email" id="email" type="text" name="email"   placeholder="Enter your email">
           </li>
           <li>
             <label for="firstName">First Name</label>
-            <input [(ngModel)]="model.firstName" id="firstName" name="firstName"  type="text"  placeholder="Enter your first name">
+            <input  [(ngModel)]="formData.firstName" id="firstName" name="firstName"  type="text"  placeholder="Enter your first name">
           </li>
           <li>
             <label for="lastName">Last Name</label>
-            <input [(ngModel)]="model.lastName" id="lastName" type="text" name="lastName"  placeholder="Enter your last name">
+            <input  [(ngModel)]="formData.lastName" id="lastName" type="text" name="lastName"  placeholder="Enter your last name">
           </li>
           <li>
-            <input type="checkbox">
-            <label>I agree to Term & Conditions</label>
+            <input id="terms" name="terms" ngModel type="checkbox">
+            <label for="terms">I agree to Term & Conditions</label>
           </li>
           <li>
             <input type="submit" value="Register">
