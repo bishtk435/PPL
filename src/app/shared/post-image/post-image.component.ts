@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./post-image.component.css']
 })
 export class PostImageComponent implements OnInit {
-  @Input() postDetails: object;
+  @Input() postDetails: any;
 
   constructor() { }
 

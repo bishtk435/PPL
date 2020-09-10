@@ -8,7 +8,7 @@ import { ApiService } from '../../core/api.service';
 })
 export class NewCommentComponent implements OnInit {
 
-  @Input() postDetails: string;
+  @Input() postDetails: any;
 
   comment = '';
 

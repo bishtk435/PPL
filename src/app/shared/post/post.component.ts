@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PostComponent implements OnInit {
 
-  @Input() postDetails: object;
+  @Input() postDetails: any;
 
   constructor(private router: Router) { }
 

@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  handleRegister(formValues): void{
+  handleRegister(): void{
 
     if ( !this.registerService.validateFormData(this.formData) ){
       this.isError = true;

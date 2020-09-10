@@ -8,7 +8,7 @@ import { ApiService } from '../../core/api.service';
 })
 export class PostStatsComponent implements OnInit {
 
-  @Input() postDetails: object;
+  @Input() postDetails: any;
 
   isAlredayLiked: boolean;
 

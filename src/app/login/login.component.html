@@ -2,7 +2,7 @@
 <div class="content_rgt">
   <div class="login_sec">
     <h1>Log In</h1>
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
       <ul>
         <li>
           <label>Email-ID</label>
@@ -13,7 +13,7 @@
           <input [(ngModel)]="formData.password" name="password" type="text" placeholder="Enter your password">
         <app-form-input-error *ngIf="isError" [error]="error"></app-form-input-error>
         </li>
-        <p class="errorMessage" *ngIf="isLoggedInFailed">{{loggedInFailedMessage}}</p>
+        <p class="errorMessage" *ngIf="isError">{{error}}</p>
         <li><input type="checkbox">Remember Me</li>
         <li><input type="submit" value="Log In"><a routerLink="/forget-password">Forgot Password</a></li>
       </ul>
