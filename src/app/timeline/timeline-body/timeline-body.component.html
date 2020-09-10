@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="content">
+      <div class="content_rgt">
+        <app-button [buttonIcon]="'./assets/images/btn_iconb.png'" [buttonName]="'Upload Post'" (click)="onUploadButton()"></app-button>
+        <app-button [buttonIcon]="'./assets/images/btn_icona.png'" [buttonName]="'Invite Friends'"></app-button>
+        <app-button [buttonIcon]="'./assets/images/btn_icona.png'" [buttonName]="'Logout'" (click)="onLogout()"></app-button>
+        <app-categories></app-categories>
+        <app-featured></app-featured>
+      </div>
+      <div class="content_lft">
+        <app-user-detail></app-user-detail>
+        <app-post></app-post>
+      </div>
+    </div>
+    <div class="clear"></div>
+</div>

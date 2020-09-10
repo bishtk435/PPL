@@ -1,46 +1,53 @@
-<div class="container">
-    <div class="content">
-      <div class="content_rgt">
-      <div class="register_sec">
-      <h1>Create An Account</h1>
-      <form #registerForm="ngForm" (ngSubmit)="handleRegister(registerForm.value)">
-        <ul>
-          <li>
-            <label for="username">Username</label>
-            <input [(ngModel)]="formData.username" id="username" name="username"  type="text"  placeholder="Enter your username">
-          </li>
-          <li>
-            <label for="password">Password</label>
-            <input  [(ngModel)]="formData.password" id="password" name="password"  type="text"  placeholder="Enter your password">
-          </li>
-          <li>
-            <label for="email">Email</label>
-            <input  [(ngModel)]="formData.email" id="email" type="text" name="email"   placeholder="Enter your email">
-          </li>
-          <li>
-            <label for="firstName">First Name</label>
-            <input  [(ngModel)]="formData.firstName" id="firstName" name="firstName"  type="text"  placeholder="Enter your first name">
-          </li>
-          <li>
-            <label for="lastName">Last Name</label>
-            <input  [(ngModel)]="formData.lastName" id="lastName" type="text" name="lastName"  placeholder="Enter your last name">
-          </li>
-          <li>
-            <input id="terms" name="terms" ngModel type="checkbox">
-            <label for="terms">I agree to Term & Conditions</label>
-          </li>
-          <li>
-            <input type="submit" value="Register">
-          </li>
-        </ul>
-      </form>
-      <div class="addtnal_acnt">I already have an account.<a routerLink="/login">Login My Account !</a></div>
-      </div>
-      
-      </div>
-      <div class="content_lft">
-      <h1>Welcome from PPL!</h1>
-      <p class="discrptn">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
-      <img src="../assets/images/img_9.png"  alt=""/> </div>
-    </div> 
+<app-welcome-message></app-welcome-message>
+<div class="content_rgt">
+  <div class="register_sec">
+    <h1>Create An Account</h1>
+    <form #registerForm="ngForm" (ngSubmit)="handleRegister()">
+      <ul>
+        <li>
+          <label for="username">Username</label>
+          <input [(ngModel)]="formData.username" id="username" name="username"  type="text"  placeholder="Enter your username">
+        </li>
+        <li>
+          <label for="password">Password</label>
+          <input  [(ngModel)]="formData.password" id="password" name="password"  type="password"  placeholder="Enter your password">
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input  [(ngModel)]="formData.email" id="email" type="email" name="email"   placeholder="Enter your email">
+        </li>
+        <li>
+          <label for="firstName">First Name</label>
+          <input  [(ngModel)]="formData.firstName" id="firstName" name="firstName"  type="text"  placeholder="Enter your first name">
+        </li>
+        <!-- <app-input-field 
+          [inputLabel]="'First Name'" 
+          [inputId]="'firstName'"
+          [placeholderField]="'Enter your first name'"
+          [model]="formData.firstName"
+        >
+        </app-input-field>
+        <app-input-field 
+          [inputLabel]="'Age'" 
+          [inputId]="'age'"
+          [placeholderField]="'Enter your age'"
+          [model]="'formData.age'"
+        >
+        </app-input-field> -->
+        <li>
+          <label for="lastName">Last Name</label>
+          <input  [(ngModel)]="formData.lastName" id="lastName" type="text" name="lastName"  placeholder="Enter your last name">
+        </li>
+        <app-form-input-error *ngIf="isError" [error]="error"></app-form-input-error>
+        <li>
+          <input id="terms" [(ngModel)]="formData.terms" name="terms" ngModel type="checkbox">
+          <label for="terms">I agree to Term & Conditions</label>
+        </li>
+        <li>
+          <input type="submit" value="Register">
+        </li>
+      </ul>
+    </form>
+    <div class="addtnal_acnt">I already have an account.<a routerLink="/login">Login My Account !</a></div>
+  </div>
 </div>

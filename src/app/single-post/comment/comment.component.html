@@ -1,0 +1,10 @@
+<li *ngFor="let comment of postDetails.comment">
+    <div class="list_image">
+      <div class="image_sec"><img src="../../../assets/images/post_img.png"></div>
+      <div class="image_name">{{comment.email}}</div>
+    </div>
+    <div class="list_info">
+      {{comment.content}}
+    </div>
+    <input type="button" value="Reply" class="orng_btn">
+</li>

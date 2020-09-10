@@ -1,0 +1,6 @@
+<div class="cmnt_div1">
+  <form #commentForm="ngForm" (ngSubmit)="onSubmitComment()" autocomplete="off">
+    <input type="text" [(ngModel)]="comment" value="Enter your Comment" name="comment" class="cmnt_bx1">
+    <input type="submit" class="sub_bttn1" value="Submit Comment">
+  </form>
+</div>

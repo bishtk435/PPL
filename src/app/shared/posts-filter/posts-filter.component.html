@@ -1,0 +1,23 @@
+<div class="contnt_1">
+    <div class="list_1">
+        <ul>
+            <li>
+            <input type="checkbox" class="chk_bx">
+            Friends</li>
+            <li>
+            <input type="checkbox" class="chk_bx">
+            Flaged</li>
+        </ul>
+    </div>
+    <div class="post_div">
+        <div class="post_list">
+            <ul>
+                <li *ngFor="let filter of postsFilters">
+                    <a href="#">
+                        <span class="list_img"><img [src]="filter.filterIcon"></span>{{filter.filterName}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="post_txt">4 New Post Updates</div>
+    </div>
+</div>

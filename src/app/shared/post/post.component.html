@@ -1,0 +1,10 @@
+    <div class="div_a">
+      <!-- <app-post-title></app-post-title> -->
+      <div class="div_title">{{postDetails.caption}}</div>
+      <app-post-category></app-post-category>
+      <app-post-info [whosePost]="postDetails.email" [postDate]="postDetails.date" ></app-post-info>
+      <app-post-image [postDetails]="postDetails" (click)="goToPostDetails()"></app-post-image>
+      <app-post-stats
+        [postDetails]="postDetails"
+      ></app-post-stats>
+   </div>

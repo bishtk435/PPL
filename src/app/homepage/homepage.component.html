@@ -1,0 +1,43 @@
+<div *ngIf="isPostButtonClicked" class="popup_sec" id="pop_post">
+        <div class="clos_btn"><img src="./assets/images/clos.png" (click)="closePostPopUp()" id="clos_pop"/></div>
+        <div class="pop_hdr">Create your Post here!</div>
+        <form #postForm="ngForm" (ngSubmit)="onSubmitClicked()">
+          <label for="post">Select Image file:</label>
+          <input type="file" id="post" name="post" (change)="handleFileUpload($event.target.files)"><br><br>
+          <label for="caption">Enter Caption:</label>
+          <textarea type="text" [(ngModel)]="postFormData.caption" id="caption" name="caption"></textarea><br><br>
+          <input type="submit" id="post_submit" value="Post">
+        </form>
+</div>  
+
+<div class="container">
+  <div class="content">
+    <div class="content_rgt">
+      <app-button 
+        [buttonIcon]="'./assets/images/btn_iconb.png'" 
+        [buttonName]="'Upload Post'" 
+        (click)="onUploadButton()">
+      </app-button>
+      <app-button 
+        [buttonIcon]="'./assets/images/btn_icona.png'" 
+        [buttonName]="'Invite Friends'">
+      </app-button>
+      <app-button 
+        [buttonIcon]="'./assets/images/btn_icona.png'" 
+        [buttonName]="'Logout'" 
+        (click)="onLogout()">
+      </app-button>
+      <app-categories></app-categories>
+      <app-featured></app-featured>
+    </div>
+    <div class="content_lft">
+      <app-posts-filter></app-posts-filter>
+      <div class="contnt_2">
+        <app-post *ngFor="let post of postsDetails"
+          [postDetails]="post"
+        >
+      </app-post>
+      </div>
+    </div>
+  </div>
+</div> 

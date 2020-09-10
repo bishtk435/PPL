@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="content">
+      <div class="content_rgt">
+        <app-button [buttonIcon]="'./assets/images/btn_iconb.png'" [buttonName]="'Upload Post'" (click)="onUploadButton()"></app-button>
+        <app-button [buttonIcon]="'./assets/images/btn_icona.png'" [buttonName]="'Invite Friends'"></app-button>
+        <app-button [buttonIcon]="'./assets/images/btn_icona.png'" [buttonName]="'Logout'" (click)="onLogout()"></app-button>  
+        <app-categories></app-categories>
+        <app-featured></app-featured>
+      </div>
+      <div class="content_lft"> 
+        <app-post [postDetails]="postDetails"></app-post>
+        <div class="contnt_3">
+          <ul>
+           <app-comment [postDetails]="postDetails"></app-comment>         
+            <li>          
+              <app-new-comment [postDetails]="postDetails"></app-new-comment>     
+            </li>
+          </ul>
+          <div class="view_div"><a href="#">View more</a></div>    
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+</div>

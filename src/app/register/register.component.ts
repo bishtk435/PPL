@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from './register.service';
 import { Router } from '@angular/router';
+import { ApiService } from '../core/api.service';
 
 
 @Component({
@@ -10,46 +11,47 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private registerService: RegisterService, private router: Router) { }
-
-  ngOnInit(): void {
-  
-  }
+  isError = false;
+  error = '';
 
   formData = {
     username: '',
     password: '',
     email: '',
     firstName: '',
-    lastName: ''
-  }
+    lastName: '',
+    terms: false
+  };
+  constructor(
+    private api: ApiService,
+    private registerService: RegisterService,
+    private router: Router){ }
 
-  handleRegister(formValue){
+  ngOnInit(): void {}
 
-    console.log('This is form values we are receiving: ',this.formData);
-    if(!this.registerService.validateFormData(this.formData)){
-      alert('All fields required!');
+  handleRegister(formValues): void{
+
+    if ( !this.registerService.validateFormData(this.formData) ){
+      this.isError = true;
+      this.error = 'All fields required!';
       return;
     }else{
-      if(formValue.terms!= true){
-        alert('Please accept Terms & Conditions!');
+      if (this.formData.terms !== true){
+        this.isError = true;
+        this.error = 'Please accept Terms & Conditions!';
         return;
       }
     }
 
-    console.log('This is inside the formValue:', formValue);
-    
-    
-    this.registerService.registerRequest(this.formData)
+    this.api.post('user/register', this.formData)
     .subscribe( res => {
-      console.log('This is we are getting from the server:', res);
-      if(res === '1'){
+      if (res === '1'){
         alert('Successfully Registered!');
         this.router.navigate(['/login']);
-      }else{    
-        alert('Email alreday exists!');
+      }else{
+        this.isError = true;
+        this.error = 'Email already exists!';
       }
-    })
+    });
   }
-
 }

@@ -1,0 +1,14 @@
+<div class="rght_cate">
+    <div class="rght_cate_hd" id="rght_cat_bg">Categories</div>
+    <div class="rght_list">
+      <ul *ngFor="let data of categoriesData">
+        <li>
+          <a href="#">
+            <span class="list_icon">
+              <img [src]="data.icon" alt="up" />
+            </span> {{data.categoryName}}
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>

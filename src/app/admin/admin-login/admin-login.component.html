@@ -1,0 +1,16 @@
+<app-welcome-message></app-welcome-message>
+<div class="content_rgt">
+  <div class="login_sec">
+    <h1>Log In [Admin]</h1>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <ul>
+        <li><label>Email-ID</label><input [(ngModel)]="formData.email" name="email" type="text" placeholder="Enter your email"></li>
+        <li><label>Password</label><input [(ngModel)]="formData.password" name="password" type="text" placeholder="Enter your password"></li>
+        <p class="errorMessage" *ngIf="isLoggedInFailed">{{loggedInFailedMessage}}</p>
+        <li><input type="checkbox">Remember Me</li>
+        <li><input type="submit" value="Log In"><a routerLink="/forget-password">Forgot Password</a></li>
+      </ul>
+    </form>
+  </div>
+  <a routerLink="/login">Log In as User</a>
+</div>
