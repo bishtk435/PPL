@@ -6103,19 +6103,19 @@ a.badge:focus {
   position: fixed;
 }
 
-
+/* 
 .header {
 	float: left;
 	width: 90%;
 	padding: 0% 5% 0% 5%;
 	height: 66px;
 	background-color: #ffa21d;
-}
-.header_lft {
+} */
+/* .header_lft {
 	float: left;
 	width: 59%;
 	height: auto;
-}
+} */
 .logo {
 	float: left;
 	width: 162px;
@@ -6127,7 +6127,7 @@ a.badge:focus {
 .logo img {
 	margin: 10px 0px 0px 0px;
 }
-.navigatn {
+/* .navigatn {
 	float: left;
 	width: 68%;
 	height: auto;
@@ -6166,14 +6166,14 @@ a.badge:focus {
 	background-position: bottom center;
 	width: 12px;
 	height: 7px;
-}
-.header_rgt {
+} */
+/* .header_rgt {
 	float: right;
 	width: 38%;
 	height: auto;
 	padding-top: 1%;
-}
-.flag_div {
+} */
+/* .flag_div {
 	float: left;
 	background-image: url(../images/arw2.png);
 	background-position: right;
@@ -6183,7 +6183,7 @@ a.badge:focus {
 .flag_div img {
 	float: left;
 	margin-right: 17px;
-}
+} */
 .txt_box {
 	float: left;
 	background-image: url(../images/serch.png);
@@ -6521,15 +6521,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3891f', end
 	margin-left: 11px;
 	padding-right: 11px;
 }
+/*
 .rght_btn {
-	background: #ffa31e; /* Old browsers */
-	background: -moz-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb02f), color-stop(100%, #ff8e14)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #ffb02f 0%, #ff8e14 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', endColorstr='#ff8e14', GradientType=0 ); /* IE6-9 */
+	background: #ffa31e; // Old browsers 
+	background: -moz-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); // FF3.6+ 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb02f), color-stop(100%, #ff8e14)); // Chrome,Safari4+ 
+	background: -webkit-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); // Chrome10+,Safari5.1+ 
+	background: -o-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); // Opera 11.10+ 
+	background: -ms-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); // IE10+ 
+	background: linear-gradient(to bottom, #ffb02f 0%, #ff8e14 100%); // W3C 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', endColorstr='#ff8e14', GradientType=0 ); // IE6-9 
 	border: 1px solid #ee830d;
 	border-radius: 1px;
 	box-shadow: 0 1px 0 #ffcc30 inset;
@@ -6542,12 +6543,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', end
 	text-shadow: 0px 1px 0px #ac6209;
 	font-size: 24px;
 	font-weight: bold;
-}
+} 
+*/
 .rght_btn a {
 	color: #fff;
 	line-height: 58px;
 }
-.rght_btn_icon {
+/* .rght_btn_icon {
 	width: auto;
 	height: auto;
 	float: left;
@@ -6556,7 +6558,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', end
 	border-radius: 3px;
 	padding: 6px 6px 4px 6px;
 	margin: 9px 4px 0px 0px;
-}
+} */
 .btn_sep {
 	width: 22px;
 	float: left;
@@ -6648,15 +6650,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', end
 	margin: 10px -11px 0px 0px;
 }
 /*******Footer*****/
-.footr {
+/* .footr {
 	float: left;
 	width: 90%;
 	padding: 1% 5% 1% 5%;
 	margin-top: 20px;
 	height: auto;
 	background-color: #ffa21d;
-}
-.footr_lft {
+} */
+/* .footr_lft {
 	float: left;
 	width: 62%;
 	height: auto;
@@ -6694,7 +6696,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', end
 }
 .footr_rgt ul li:last-child {
 	margin-right: 0%;
-}
+} */
 
 
 
@@ -7043,6 +7045,3 @@ background: -ms-linear-gradient(top, #faf9f9 0%, #f1eff2 100%);
 background: linear-gradient(to bottom, #faf9f9 0%, #f1eff2 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faf9f9', endColorstr='#f1eff2', GradientType=0 ); font-size:16px; box-shadow:1px 1px 1px #f2f0f0;  }
 .view_div a{color:#202226; text-align:center;}
-
-
-

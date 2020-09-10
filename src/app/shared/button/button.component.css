@@ -1,3 +1,37 @@
 .button{
     cursor: pointer;
 }
+
+.rght_btn {
+	background: #ffa31e; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb02f), color-stop(100%, #ff8e14)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffb02f 0%, #ff8e14 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffb02f 0%, #ff8e14 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', endColorstr='#ff8e14', GradientType=0 ); /* IE6-9 */
+	border: 1px solid #ee830d;
+	border-radius: 1px;
+	box-shadow: 0 1px 0 #ffcc30 inset;
+	height: auto;
+	padding: 0% 5% 0px 5%;
+	width: 90%;
+	margin: 0px 0px 15px 0px;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 0px 1px 0px #ac6209;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.rght_btn_icon {
+	width: auto;
+	height: auto;
+	float: left;
+	background: #fff;
+	box-shadow: 0 2px 0 #b1b1b1 inset;
+	border-radius: 3px;
+	padding: 6px 6px 4px 6px;
+	margin: 9px 4px 0px 0px;
+}

@@ -1,0 +1,48 @@
+.footr {
+	float: left;
+	width: 90%;
+	padding: 1% 5% 1% 5%;
+	margin-top: 20px;
+	height: auto;
+	background-color: #ffa21d;
+}
+
+.footr_lft {
+	float: left;
+	width: 62%;
+	height: auto;
+}
+.footer_div1 {
+	float: left;
+	text-align: left;
+	color: #fff;
+	font-size: 14px;
+	line-height: 38px;
+}
+.footer_div2 {
+	float: right;
+	color: #000;
+	text-align: left;
+	font-size: 13px;
+	line-height: 38px;
+}
+.footer_div2 a {
+	color: #000;
+	padding: 0px 2px 0px 2px;
+}
+.footr_rgt {
+	float: right;
+	width: 13%;
+}
+.footr_rgt ul {
+	float: left;
+	width: 100%;
+	margin:auto;
+}
+.footr_rgt ul li {
+	float: left;
+	margin-right: 3%;
+}
+.footr_rgt ul li:last-child {
+	margin-right: 0%;
+}

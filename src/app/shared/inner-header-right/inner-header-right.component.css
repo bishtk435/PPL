@@ -1,0 +1,18 @@
+.header_rgt {
+	float: right;
+	width: 38%;
+	height: auto;
+	padding-top: 1%;
+}
+
+.flag_div {
+	float: left;
+	background-image: url(../../../assets/images/arw2.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	margin-top: 12px;
+}
+.flag_div img {
+	float: left;
+	margin-right: 17px;
+}

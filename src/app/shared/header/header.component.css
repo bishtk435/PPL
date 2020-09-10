@@ -1,3 +1,59 @@
 .show-cursor {
     cursor: pointer;
 }
+
+.header {
+	float: left;
+	width: 90%;
+	padding: 0% 5% 0% 5%;
+	height: 66px;
+	background-color: #ffa21d;
+}
+
+.header_lft {
+	float: left;
+	width: 59%;
+	height: auto;
+}
+
+
+.navigatn {
+	float: left;
+	width: 68%;
+	height: auto;
+	margin-left: 8%;
+}
+.navigatn ul {
+	float: left;
+	width: 100%;
+	margin-left:0px;
+	margin-bottom:0px;
+}
+.navigatn ul li {
+	float: left;
+	font-size: 15px;
+	text-align: left;
+	line-height: 66px;
+	margin-right: 5%;
+}
+.navigatn ul li a {
+	color: #FFF;
+	padding-bottom: 25px;
+}
+.navigatn ul li:last-child {
+	margin-right: 0%;
+}
+.navigatn ul li a:hover {
+	background-image: url(../../../assets/images/arw.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	width: 12px;
+	height: 7px;
+}
+.navigatn ul li a.active {
+	background-image: url(../../../assets/images/arw.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	width: 12px;
+	height: 7px;
+}
