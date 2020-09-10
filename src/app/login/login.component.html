@@ -10,7 +10,7 @@
         </li>
         <li>
           <label>Password</label>
-          <input [(ngModel)]="formData.password" name="password" type="text" placeholder="Enter your password">
+          <input [(ngModel)]="formData.password" name="password" type="password" placeholder="Enter your password">
         </li>
         <app-form-input-error *ngIf="isError" [error]="error"></app-form-input-error>
         <li><input type="checkbox">Remember Me</li>

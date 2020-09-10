@@ -72,7 +72,7 @@ export class HomepageComponent implements OnInit {
     payload.append('email', localStorage.getItem('email'));
     payload.append('date', Date());
 
-    this.api.post('http://localhost:5000/upload-post', payload)
+    this.api.post('upload-post', payload)
     .subscribe( resp => {
       if (resp === '1'){
         this.closePostPopUp();
