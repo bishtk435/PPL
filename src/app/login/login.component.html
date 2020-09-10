@@ -11,9 +11,8 @@
         <li>
           <label>Password</label>
           <input [(ngModel)]="formData.password" name="password" type="text" placeholder="Enter your password">
-        <app-form-input-error *ngIf="isError" [error]="error"></app-form-input-error>
         </li>
-        <p class="errorMessage" *ngIf="isError">{{error}}</p>
+        <app-form-input-error *ngIf="isError" [error]="error"></app-form-input-error>
         <li><input type="checkbox">Remember Me</li>
         <li><input type="submit" value="Log In"><a routerLink="/forget-password">Forgot Password</a></li>
       </ul>

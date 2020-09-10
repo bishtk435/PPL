@@ -51,6 +51,10 @@ export class LoginComponent implements OnInit {
           this.error = 'Incorrect Password';
         }
       }
+    }, error => {
+      console.log('oops', error);
+      this.isError = true;
+      this.error = error.name + ': ' + error.statusText;
     });
   }
 }
