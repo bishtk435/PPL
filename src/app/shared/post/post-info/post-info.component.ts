@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostInfoComponent implements OnInit {
 
-  @Input() whosePost: string;
+  @Input() postAuthor: string;
   @Input() postDate: string;
 
   constructor() { }

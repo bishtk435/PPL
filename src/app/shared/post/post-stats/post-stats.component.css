@@ -1,0 +1,55 @@
+ .div_image {
+	float: left;
+	width: 100%;
+	border-radius: 2px;
+	height: auto;
+}
+.div_image img {
+	float: left;
+	width: 100%;
+} 
+.div_btm {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+.btm_list {
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+.btm_list ul {
+	float: left;
+	width: 100%;
+	height: auto;
+	margin:auto;
+}
+.btm_list ul li {
+	background: #f3891f; 
+	background: -moz-linear-gradient(top, #f3891f 0%, #ec6a14 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3891f), color-stop(100%, #ec6a14));
+	background: -webkit-linear-gradient(top, #f3891f 0%, #ec6a14 100%);
+	background: -o-linear-gradient(top, #f3891f 0%, #ec6a14 100%);
+	background: -ms-linear-gradient(top, #f3891f 0%, #ec6a14 100%);
+	background: linear-gradient(to bottom, #f3891f 0%, #ec6a14 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3891f', endColorstr='#ec6a14', GradientType=0 ); 
+	border: 1px solid #ee830d;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 #ffcc30 inset;
+	height: auto;
+	padding: 0.5% 1.5% 0.5% 0.5%;
+	width: auto;
+	margin: 0px 8px 0px 0px;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 0px 1px 0px #ac6209;
+}
+.btm_list ul li a {
+	color: #fff;
+	float: left;
+	width: 100%;
+	font-size: 13px;
+	height: 24px;
+	line-height: 24px;
+} 

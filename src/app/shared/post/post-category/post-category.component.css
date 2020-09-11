@@ -1,6 +1,6 @@
 .btm_rgt {
 	float: right;
-	background: url(../../../assets/images/side_arc.png) no-repeat;
+	background: url(../../../../assets/images/side_arc.png) no-repeat;
 	width: auto;
 	height: 28px;
 	color: #fff;
@@ -17,7 +17,7 @@
 	width: auto;
 	float: left;
 	height: 28px;
-	background: url(../../../assets/images/side_img.png);
+	background: url(../../../../assets/images/side_img.png);
 	margin-left: 11px;
 	padding-right: 11px;
 }

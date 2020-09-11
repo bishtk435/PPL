@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ApiService } from '../../core/api.service';
+import { ApiService } from '../../../core/api.service';
 
 @Component({
   selector: 'app-post-stats',

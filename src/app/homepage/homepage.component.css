@@ -6,3 +6,19 @@
     background-color: #ffa21d;
     
 }
+
+.content_lft {
+	float: left;
+	width: 66%;
+	height: auto;
+}
+
+.content_lft h1:first-child{
+    width:100%; height:auto; float:left;
+    font-family: Helvetica;
+    font-size: 36px;
+    color: #f47b13;
+    text-shadow: 1px 1px 1px #fff;	
+}
+
+.content_lft p.discrptn{ width:100%; height:auto; float:left; font-size:13px; color:#807979;}

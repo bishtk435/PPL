@@ -1,0 +1,10 @@
+.div_image {
+	float: left;
+	width: 100%;
+	border-radius: 2px;
+	height: auto;
+}
+.div_image img {
+	float: left;
+	width: 100%;
+}

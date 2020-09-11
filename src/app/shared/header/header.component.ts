@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   isLoggedIn$: Observable<boolean>;
+  // isLoggedIn = false;
 
   constructor(private store: Store<{LoggedIn: boolean}>, private router: Router) {
     this.isLoggedIn$ = store.pipe(select('LoggedIn'));
@@ -18,6 +19,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
 
   goToHome(): void{
     this.router.navigate(['/home-page']);

@@ -1,0 +1,39 @@
+#pop_post {
+    z-index: 1;
+}
+
+#post_submit {
+    background-color: #ffa21d;
+    
+}
+
+.content_lft {
+	float: left;
+	width: 66%;
+	height: auto;
+}
+
+.content_lft h1:first-child{
+    width:100%; height:auto; float:left;
+    font-family: Helvetica;
+    font-size: 36px;
+    color: #f47b13;
+    text-shadow: 1px 1px 1px #fff;	
+}
+
+.content_lft p.discrptn{ width:100%; height:auto; float:left; font-size:13px; color:#807979;}
+
+.div_a {
+	float: left;
+	padding: 3%;
+	width: 94%;
+	height: auto;
+}
+
+.div_title {
+	float: left;
+	width: 78%;
+	font-size: 24px;
+	color: #e87818;
+	line-height:28px;
+}

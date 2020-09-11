@@ -12,11 +12,11 @@ import { PostComponent } from './post/post.component';
 import { FeaturedComponent } from './featured/featured.component';
 import { PostsFilterComponent } from './posts-filter/posts-filter.component';
 import { SubmitButtonComponent } from './submit-button/submit-button.component';
-import { PostTitleComponent } from './post-title/post-title.component';
-import { PostInfoComponent } from './post-info/post-info.component';
-import { PostStatsComponent } from './post-stats/post-stats.component';
-import { PostCategoryComponent } from './post-category/post-category.component';
-import { PostImageComponent } from './post-image/post-image.component';
+import { PostTitleComponent } from './post/post-title/post-title.component';
+import { PostInfoComponent } from './post/post-info/post-info.component';
+import { PostStatsComponent } from './post/post-stats/post-stats.component';
+import { PostCategoryComponent } from './post/post-category/post-category.component';
+import { PostImageComponent } from './post/post-image/post-image.component';
 import { FormInputErrorComponent } from './form-input-error/form-input-error.component';
 import { InputFieldComponent } from './input-field/input-field.component';
 

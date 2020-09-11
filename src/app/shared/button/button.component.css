@@ -35,3 +35,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02f', end
 	padding: 6px 6px 4px 6px;
 	margin: 9px 4px 0px 0px;
 }
+
+.rght_btn a {
+	color: #fff;
+	line-height: 58px;
+}
+
+.btn_sep {
+	width: 22px;
+	float: left;
+	margin: 0px 15px 0px 5px;
+	padding: 0px;
+	height: 58px;
+}
+

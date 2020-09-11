@@ -1,0 +1,8 @@
+.profile_form{ float:left; width:100%; height:auto;}
+.profile_form ul{ float:left; width:100%; margin-left:0px;} 
+.profile_form ul li{ float:left; width:100%; margin-bottom:1%;} 
+.profile_form ul li:last-child{ margin-bottom:0%;}
+
+.div_name1{ float:left; text-align:left; font-size:12px; color:#848181; width:100%; font-family:"Helvetica Neue";}
+.div_name2{ float:left; text-align:left; font-size:16px; color:#615a5a; width:100%; font-family: "Helvetica Neue"; font-weight:bold;}
+.div_name3{ float:left; text-align:left; font-size:13px; color:#202226; margin-top:2px; width:100%; font-family: "Helvetica Neue";}
