@@ -20,10 +20,12 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    console.log('this is ngOnInit');
     this.loggedIn = localStorage.getItem('email');
   }
 
   ngDoCheck(): void {
+    console.log('this is ngDoCheck of header');
     this.loggedIn = localStorage.getItem('email');
   }
 

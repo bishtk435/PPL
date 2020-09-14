@@ -31,7 +31,7 @@ export class ForgetPasswordComponent implements OnInit {
     .subscribe( resp => {
       if ( resp === '1'){
         this.isEmailSent = true;
-        localStorage.setItem('email', this.formData.email);
+        localStorage.setItem('email-reset', this.formData.email);
         // this.router.navigate(['/login']);
       }else{
         this.isIncorrectEmail = true;

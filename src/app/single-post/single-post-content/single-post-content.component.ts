@@ -18,7 +18,13 @@ export class SinglePostContentComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    console.log('this is post details', this.postDetails);
+    if (localStorage.getItem('currentPost') === null){
+      this.router.navigate(['/login']);
+    }
+  }
+
+  ngOnDestroy(): void {
+    localStorage.removeItem('currentPost');
   }
 
   onUploadButton(): void{
