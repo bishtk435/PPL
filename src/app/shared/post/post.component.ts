@@ -13,10 +13,11 @@ export class PostComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    console.log('this is the postDetails', this.postDetails);
   }
 
   goToPostDetails(): void{
-    localStorage.setItem('currentPost', JSON.stringify(this.postDetails));
+   // localStorage.setItem('currentPost', JSON.stringify(this.postDetails));
     this.router.navigate(['/post', this.postDetails._id]);
   }
 
