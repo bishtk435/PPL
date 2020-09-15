@@ -32,7 +32,7 @@ export class ResetPasswordComponent implements OnInit {
     }
 
     const requestData = {
-      email: localStorage.getItem('email-reset  '),
+      email: localStorage.getItem('email-reset'),
       password: this.formData.password
    };
 

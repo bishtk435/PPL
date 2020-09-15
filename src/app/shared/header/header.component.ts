@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, DoCheck } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { isLoogedIn } from 'src/app/app.reducer';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, DoCheck {
 
   //  isLoggedIn$: Observable<boolean>;
 
@@ -29,5 +29,9 @@ export class HeaderComponent implements OnInit {
 
   goToHome(): void{
     this.router.navigate(['/home-page']);
+  }
+
+  goTotimeline(): void{
+    this.router.navigate(['/timeline']);
   }
 }

@@ -1,19 +1,53 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TimelineBodyComponent } from './timeline-body/timeline-body.component';
 import { SharedModule } from '../shared/shared.module';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserDetailNavigationComponent } from './user-detail-navigation/user-detail-navigation.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
+import { MyPostsComponent } from './user-detail-navigation/my-posts/my-posts.component';
+import { AboutComponent } from './user-detail-navigation/about/about.component';
+import { AlbumComponent } from './user-detail-navigation/album/album.component';
+import { PetsComponent } from './user-detail-navigation/pets/pets.component';
 
 
-const routes = [
-  {path: '', component: TimelineBodyComponent}
+const routes: Routes = [
+  {
+  path: '',
+  component: TimelineBodyComponent,
+  children: [
+    {
+      path: 'my-posts',
+      component: MyPostsComponent
+    },
+    {
+      path: 'about',
+      component: AboutComponent
+    },
+    {
+      path: 'album',
+      component: AlbumComponent
+    },
+    {
+      path: 'pets',
+      component: PetsComponent
+    }
+  ]
+},
 ];
 
 @NgModule({
-  declarations: [TimelineBodyComponent, UserDetailComponent, UserDetailNavigationComponent, ProfileFormComponent],
+  declarations: [
+    TimelineBodyComponent,
+    UserDetailComponent,
+    UserDetailNavigationComponent,
+    ProfileFormComponent,
+    MyPostsComponent,
+    AboutComponent,
+    AlbumComponent,
+    PetsComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,

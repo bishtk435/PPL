@@ -27,7 +27,11 @@ export class RegisterComponent implements OnInit {
     private registerService: RegisterService,
     private router: Router){ }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (localStorage.getItem('email') !== null){
+      this.router.navigate(['/home-page']);
+    }
+  }
 
   handleRegister(): void{
 

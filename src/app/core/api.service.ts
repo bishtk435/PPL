@@ -19,6 +19,16 @@ export class ApiService {
     return this.http.get(serverAddress + route, {params: param, responseType: 'text'});
   }
 
+  getUserDetails(route: string, payload: any): any{
+    const param = new HttpParams().set('email', payload.email);
+    return this.http.get(serverAddress + route, {params: param, responseType: 'text'});
+  }
+
+  getMyPosts(route: string, payload: any): any{
+    const param = new HttpParams().set('email', payload.email);
+    return this.http.get(serverAddress + route, {params: param, responseType: 'text'});
+  }
+
   getWithoutParams(route: string): any{
     return this.http.get(serverAddress + route, {responseType: 'text'});
   }
