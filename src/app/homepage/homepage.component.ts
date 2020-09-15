@@ -31,7 +31,9 @@ export class HomepageComponent implements OnInit {
       this.router.navigate(['/login']);
     }
 
-    this.api.get('get-all-post')
+    const payload: object = null;
+
+    this.api.getWithoutParams('get-all-post')
     .subscribe( res => {
 
       res = JSON.parse(res);

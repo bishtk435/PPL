@@ -1,7 +1,7 @@
 <div class="header">
     <div class="header_lft">
       <div class="logo show-cursor"  (click)="goToHome()"><img src="../assets/images/logo.png"></div>
-      <div class="navigatn" *ngIf="isLoggedIn$ | async">
+      <div class="navigatn" *ngIf="loggedIn">
         <ul>
           <li><a (click)="goToHome()" class="active show-cursor">Home</a></li>
           <li><a > E-Coupons </a></li>
@@ -11,5 +11,5 @@
         </ul>
       </div>
     </div>
-    <app-inner-header-right *ngIf="isLoggedIn$ | async"></app-inner-header-right>
+    <app-inner-header-right *ngIf="loggedIn"></app-inner-header-right>
 </div> 

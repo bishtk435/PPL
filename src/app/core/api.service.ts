@@ -14,7 +14,13 @@ export class ApiService {
     return this.http.post(serverAddress + route, payload, {responseType: 'text'});
   }
 
-  get(route: string): any{
+  getWithParams(route: string, payload: any): any{
+    const param = new HttpParams().set('_id', payload.id);
+    return this.http.get(serverAddress + route, {params: param, responseType: 'text'});
+  }
+
+  getWithoutParams(route: string): any{
     return this.http.get(serverAddress + route, {responseType: 'text'});
   }
+
 }

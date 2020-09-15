@@ -1,0 +1,22 @@
+.div_top {
+	float: left;
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+}
+.div_top_lft {
+	float: left;
+	font-size: 13px;
+	text-align: left;
+	color: #6f6f6f;
+	line-height: 43px;
+}
+.div_top_lft img {
+	float: left;
+	margin-right: 12px;
+}
+.div_top_rgt {
+	float: right;
+	height: auto;
+	line-height: 43px;
+}

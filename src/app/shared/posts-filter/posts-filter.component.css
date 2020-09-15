@@ -1,0 +1,25 @@
+.contnt_1 {
+	float: left;
+	width: 100%;
+	height: auto;
+}
+.list_1 {
+	float: left;
+	width: 100%;
+	height: auto;
+}
+.list_1 ul {
+	float: left;
+	width: 100%;
+	height: auto;
+	margin-left:0px;
+	margin-bottom:0px;
+}
+.list_1 ul li {
+	float: left;
+	font-size: 14px;
+	color: #444444;
+	line-height: 18px;
+	height: auto;
+	margin-right: 7%;
+}

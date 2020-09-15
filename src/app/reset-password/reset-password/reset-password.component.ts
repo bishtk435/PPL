@@ -32,7 +32,7 @@ export class ResetPasswordComponent implements OnInit {
     }
 
     const requestData = {
-      email: localStorage.getItem('email'),
+      email: localStorage.getItem('email-reset  '),
       password: this.formData.password
    };
 
@@ -40,7 +40,7 @@ export class ResetPasswordComponent implements OnInit {
     .subscribe( resp => {
       if (resp === '1'){
         alert('Password changed successfully!');
-        localStorage.removeItem('email');
+        localStorage.removeItem('email-reset');
         this.router.navigate(['/login']);
       }
     });

@@ -21,5 +21,4 @@ export class AdminLoginComponent implements OnInit {
 
   onSubmit(): void{
   }
-
 }
