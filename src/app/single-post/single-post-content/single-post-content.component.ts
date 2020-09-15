@@ -12,8 +12,6 @@ import { ApiService } from 'src/app/core/api.service';
 })
 export class SinglePostContentComponent implements OnInit {
 
-  // postDetails = JSON.parse(localStorage.getItem('currentPost'));
-
   postDetails: any;
 
   constructor(private router: Router, private store: Store<{LoggedIn: boolean}>,
@@ -21,9 +19,6 @@ export class SinglePostContentComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    // if (localStorage.getItem('currentPost') === null){
-    //   this.router.navigate(['/login']);
-    // }
     this.route.paramMap
     .subscribe( params => {
       const payload = {
@@ -33,7 +28,6 @@ export class SinglePostContentComponent implements OnInit {
       this.api.getWithParams('get-post', payload)
       .subscribe( resp => {
         resp = JSON.parse(resp);
-         console.log('this is reponse after parse: ', resp.post[0]);
         this.postDetails = resp.post[0];
       });
     });
@@ -44,7 +38,7 @@ export class SinglePostContentComponent implements OnInit {
   }
 
   onLogout(): void{
-    localStorage.removeItem('email')
+    localStorage.removeItem('email');
 
     this.store.dispatch(loggedOut());
     this.router.navigate(['/login']);
