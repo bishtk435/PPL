@@ -1,1 +1,1 @@
-<h2>Album Section Comming Soon!</h2>
+<img id="album" *ngFor="let image of postDetails" (click)="goToPostDetails(image._id)" [src]="'http://localhost:5000/'+image.postImagePath"/>
