@@ -10,6 +10,7 @@ import { MyPostsComponent } from './user-detail-navigation/my-posts/my-posts.com
 import { AboutComponent } from './user-detail-navigation/about/about.component';
 import { AlbumComponent } from './user-detail-navigation/album/album.component';
 import { PetsComponent } from './user-detail-navigation/pets/pets.component';
+import { TimelinePostsComponent } from './timeline-posts/timeline-posts.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
     {
       path: 'pets',
       component: PetsComponent
+    },
+    {
+      path: '/',
+      component: TimelinePostsComponent
     }
   ]
 },
@@ -46,7 +51,8 @@ const routes: Routes = [
     MyPostsComponent,
     AboutComponent,
     AlbumComponent,
-    PetsComponent
+    PetsComponent,
+    TimelinePostsComponent
   ],
   imports: [
     CommonModule,
