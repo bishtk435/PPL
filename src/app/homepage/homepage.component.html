@@ -33,7 +33,7 @@
     <div class="content_lft">
       <app-posts-filter></app-posts-filter>
       <div class="contnt_2">
-        <app-post *ngFor="let post of postsDetails"
+        <app-post *ngFor="let post of postsDetails$"
           [postDetails]="post"
         >
       </app-post>
@@ -41,3 +41,5 @@
     </div>
   </div>
 </div> 
+
+
