@@ -30,7 +30,7 @@ export class ApiService {
   }
 
   getWithoutParams(route: string): any{
-    return this.http.get(serverAddress + route, {responseType: 'text'});
+    return this.http.get(serverAddress + route, {responseType: 'json'});
   }
 
 }

@@ -10,8 +10,10 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SharedModule } from './shared/shared.module';
 import { StoreModule } from '@ngrx/store';
-import { loggedReducer } from './app.reducer';
+import { EffectsModule } from '@ngrx/effects';
 
+import { postReducer } from './homepage/post.reducers';
+import { PostEffects } from './homepage/post.effects';
 
 
 @NgModule({
@@ -26,11 +28,9 @@ import { loggedReducer } from './app.reducer';
     FormsModule,
     SharedModule,
     CoreModule,
-    StoreModule.forRoot({ LoggedIn: loggedReducer })
+    StoreModule.forRoot({ posts: postReducer }),
+    EffectsModule.forRoot([PostEffects])
   ],
-  exports: [
-  ]
-  ,
   providers: [],
   bootstrap: [AppComponent]
 })

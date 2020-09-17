@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectControlValueAccessor } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Store } from '@ngrx/store';
-import { loggedOut } from '../app.actions';
+import { Store, select} from '@ngrx/store';
+import { Observable } from 'rxjs';
 
+import { loggedOut } from '../app.actions';
 import { ApiService } from '../core/api.service';
+import { loadPost } from './post.actions';
 
 @Component({
   selector: 'app-homepage',
@@ -17,43 +20,36 @@ export class HomepageComponent implements OnInit {
     caption: null
   };
 
-  postsDetails = [];
+  postsDetails$: Observable<any>;
 
   isPostButtonClicked = false;
 
-  constructor(private router: Router, private store: Store<{LoggedIn: boolean}>,
-              private api: ApiService) { }
-
-  leftSideButton = ['Upload Post', 'Invite Friends'];
+  constructor(private router: Router,
+              private store: Store<{posts: any}>,
+              private api: ApiService
+            ){
+                this.store.pipe(select('posts')).subscribe( resp => {
+                  console.log('this is post value in store: ', resp);
+                  this.postsDetails$ = resp['postsDetails'];
+                  console.log('this is postsDetails$', this.postsDetails$);
+                });
+              }
 
   ngOnInit(): void {
     if (localStorage.getItem('email') === null){
       this.router.navigate(['/login']);
     }
+    console.log('this is homepage ngOnInit');
+    this.store.dispatch(loadPost());
 
-    const payload: object = null;
-
-    this.api.getWithoutParams('get-all-post')
-    .subscribe( res => {
-
-      res = JSON.parse(res);
-      for ( const post of res.post){
-        this.postsDetails.push(post);
-      }
-    });
-
-    // const payload = {
-    //   firstName: 'Kamal',
-    //   lastName: 'Bisht',
-    //   age: 23
-    // };
-
-    // this.api.get('http://localhost:5000/hello', payload)
-    // .subscribe( res => {
-    //   console.log('this is the hello response: ', res);
+    // this.store.pipe(select('post')).subscribe( resp => {
+    //   console.log('this is post data: ', resp.postsDetails);
     // });
   }
 
+  ngOnChanges(): void {
+    
+  }
   onUploadButton(): void{
     this.isPostButtonClicked = true;
   }
