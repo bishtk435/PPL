@@ -20,8 +20,8 @@ export class TimelineBodyComponent implements OnInit {
   }
 
   onUploadButton(): void{
-    console.log('this is upload button');
   }
+
   onLogout(): void{
     localStorage.removeItem('email');
     localStorage.removeItem('password');
