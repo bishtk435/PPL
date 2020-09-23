@@ -40,7 +40,10 @@ export class LoginComponent implements OnInit {
 
     this.api.post('user/loginform', this.formData)
     .subscribe( res => {
-      if (res === '1'){
+      res = JSON.parse(res);
+      console.log('this is login response: ', res.access_token);
+      if (res.access_token !== undefined){
+        localStorage.setItem('token', res.access_token);
         localStorage.setItem('email', this.formData.email);
 
         this.store.dispatch(loggedIn());

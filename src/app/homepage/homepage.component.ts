@@ -48,7 +48,6 @@ export class HomepageComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-    
   }
   onUploadButton(): void{
     this.isPostButtonClicked = true;

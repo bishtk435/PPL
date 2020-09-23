@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../../core/api.service';
+import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-new-comment',
@@ -12,7 +13,18 @@ export class NewCommentComponent implements OnInit {
 
   comment = '';
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService,
+              private socket: Socket
+    ) {
+      this.socket.on('new comment added', (postAuthor) => {
+        console.log('this postauthor: ', postAuthor);
+        console.log('this type of local storage', localStorage.getItem('email'));
+        if (postAuthor === localStorage.getItem('email')){
+          alert('Somebody added comment on your post');
+          location.reload();
+        }
+      });
+    }
 
   ngOnInit(): void {
   }
@@ -26,6 +38,7 @@ export class NewCommentComponent implements OnInit {
     };
 
     this.api.post('post-comment', payload).subscribe( resp => {
+      this.socket.emit('new comment added', this.postDetails.email);
       location.reload();
     });
   }

@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+
+import { Socket } from 'ngx-socket-io'; 
+
 import { ApiService } from '../../../core/api.service';
 
 @Component({
@@ -12,7 +15,14 @@ export class PostStatsComponent implements OnInit {
 
   isAlredayLiked: boolean;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService,
+              private socket: Socket
+    ) {
+      socket.on('like updated', (postAuthor) => {
+        alert('Someone Liked your post!');
+        location.reload();
+      });
+     }
 
   ngOnInit(): void {
     if (this.postDetails.likes.indexOf(localStorage.getItem('email')) === -1){
@@ -34,6 +44,7 @@ export class PostStatsComponent implements OnInit {
       this.api.post('make-like', payload)
       .subscribe( resp => {
         if ( resp === '1'){
+          this.socket.emit('like updated', this.postDetails.email);
           this.postDetails.likes.push(localStorage.getItem('email'));
           this.isAlredayLiked = true;
         }
@@ -42,12 +53,14 @@ export class PostStatsComponent implements OnInit {
       this.api.post('make-dislike', payload)
       .subscribe( resp => {
         if (resp === '1'){
+          this.socket.emit('like updated', this.postDetails.email);
           this.postDetails.likes.splice(emailIndex, 1);
           this.isAlredayLiked = false;
         }
       });
     }
 
+    location.reload();
   }
 
 }

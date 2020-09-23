@@ -11,6 +11,5 @@ export class AppComponent implements OnInit {
   constructor(private socket: Socket){}
 
   ngOnInit(): void{
-    this.socket.emit('first message', 'Hello World');
   }
 }
