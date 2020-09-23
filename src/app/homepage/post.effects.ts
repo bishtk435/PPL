@@ -11,7 +11,7 @@ export class PostEffects{
         ofType('[Homepage] Load Post'),
         mergeMap(() => this.api.getWithoutParams('get-all-post')
             .pipe(
-                map(post => ({ type: '[Homepage] Load Post Success', postsDetails: post['post']})),
+                map(post => ({ type: '[Homepage] Load Post Success', postsDetails: post.post})),
                 catchError(()=> EMPTY)
             )
         )

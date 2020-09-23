@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 
 import { serverAddress } from './server-address';
 
@@ -33,4 +33,15 @@ export class ApiService {
     return this.http.get(serverAddress + route, {responseType: 'json'});
   }
 
+  authorizateUser(token: any): any{
+    console.log("this is token", token);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+         Authorization: token
+      }),
+      responseType: 'text'
+    };
+    return this.http.get(serverAddress + 'authorizate-user', httpOptions);
+  }
 }

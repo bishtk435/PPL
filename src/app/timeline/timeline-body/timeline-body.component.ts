@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { ApiService } from 'src/app/core/api.service';
 
 import { loggedOut } from '../../app.actions';
 
@@ -11,12 +12,20 @@ import { loggedOut } from '../../app.actions';
 })
 export class TimelineBodyComponent implements OnInit {
 
-  constructor(private router: Router, private store: Store<{LoggedIn: boolean}>) { }
+  constructor(private router: Router,
+              private store: Store<{LoggedIn: boolean}>,
+              private api: ApiService
+              ) { }
 
   ngOnInit(): void {
     if (localStorage.getItem('email') === null){
       this.router.navigate(['/login']);
     }
+
+    this.api.authorizateUser(localStorage.getItem('token'))
+    .subscribe(resp => {
+      console.log('this is server response: ', resp);
+    });
   }
 
   onUploadButton(): void{
